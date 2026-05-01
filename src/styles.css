@@ -302,3 +302,207 @@
   }
 }
 
+
+/* ── Guess the Number CSS ────────────────────────────────────────────────── */
+
+.gtn-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 4rem;
+  min-height: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+.gtn-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gtn-instructions {
+  max-width: 540px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* Controls row: difficulty select + reset button side by side */
+.gtn-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.gtn-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.gtn-select {
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 2px solid #6366f1;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Shared button base */
+.gtn-btn {
+  padding: 0.45rem 1.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.gtn-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Blue submit (Guess) button */
+.gtn-btn--primary {
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: #fff;
+}
+
+/* Outlined Reset button */
+.gtn-btn--reset {
+  background: transparent;
+  border: 2px solid #6366f1;
+  color: #6366f1;
+}
+
+/* Timer badge — big centred countdown */
+.gtn-timer {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.75rem;
+  background: rgba(99, 102, 241, 0.1);
+  border: 2px solid rgba(99, 102, 241, 0.25);
+  letter-spacing: 0.05em;
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+}
+
+/* Red warning when 10 seconds or fewer remain */
+.gtn-timer--danger {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.5);
+  color: #dc2626;
+}
+
+/* Hint / result status message */
+.gtn-status {
+  margin-bottom: 1.25rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  text-align: center;
+  min-width: 280px;
+  transition: background 0.2s;
+}
+
+/* Green when player wins */
+.gtn-status--win {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #059669;
+}
+
+/* Red when time runs out */
+.gtn-status--loss {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #dc2626;
+}
+
+/* Input + Guess button in a row */
+.gtn-input-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.gtn-input {
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
+  border: 2px solid #6366f1;
+  font-size: 1rem;
+  width: 130px;
+  text-align: center;
+}
+
+.gtn-input:disabled {
+  opacity: 0.45;
+}
+
+/* Previous guesses card */
+.gtn-guesses {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.18);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+}
+
+.gtn-guesses-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Wrapping row of past-guess badges */
+.gtn-guesses-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Individual past-guess pill badge */
+.gtn-guess-badge {
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Pause button (amber/yellow) */
+.gtn-btn--pause {
+  background: transparent;
+  border: 2px solid #f59e0b;
+  color: #f59e0b;
+}
+
+/* Resume button (green) */
+.gtn-btn--resume {
+  background: transparent;
+  border: 2px solid #10b981;
+  color: #10b981;
+}
