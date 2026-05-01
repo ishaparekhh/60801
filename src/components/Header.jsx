@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { gameCatalog } from "@/data/gameCatalog.js";
+import { Home } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,7 +13,10 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 h-[70px] bg-[#f2f2f2] z-50 flex items-center justify-between">
       {/* Logo */}
-      <Link to="/" className="m-[13px] h-[44px] w-[44px] flex items-center justify-center rounded-md text-primary hover:opacity-80 transition-opacity">
+      <Link
+        to="/"
+        className="m-[13px] h-[44px] w-[44px] flex items-center justify-center rounded-md text-primary hover:opacity-80 transition-opacity"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 120 120"
@@ -46,19 +50,7 @@ export default function Header() {
         {/* Desktop Nav bar (>800px) */}
         <div className="hidden min-[800px]:flex gap-4 items-center">
           <Link to="/" className="transition-colors hover:text-primary">
-            Home
-          </Link>
-          <span className="text-muted-foreground">|</span>
-          <Link to="/decode" className="transition-colors hover:text-primary">
-            Decode
-          </Link>
-          <span className="text-muted-foreground">|</span>
-          <Link to="/matcho" className="transition-colors hover:text-primary">
-            Matcho
-          </Link>
-          <span className="text-muted-foreground">|</span>
-          <Link to="/catcher" className="transition-colors hover:text-primary">
-            Catcher
+            <Home></Home>
           </Link>
         </div>
 
@@ -70,7 +62,25 @@ export default function Header() {
               <span className="sr-only">Toggle games menu</span>
             </button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-56 max-h-[70vh] overflow-y-auto">
+          <DropdownMenuContent
+            align="end"
+            className="w-56 max-h-[70vh] overflow-y-auto"
+          >
+            <DropdownMenuItem asChild>
+              <Link to="/decode" className="w-full cursor-pointer">
+                Decode
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link to="/matcho" className="w-full cursor-pointer">
+                Matcho
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link to="/catcher" className="w-full cursor-pointer">
+                Catcher
+              </Link>
+            </DropdownMenuItem>
             {gameCatalog.map((game) => (
               <DropdownMenuItem key={game.id} asChild>
                 <Link to={game.route} className="w-full cursor-pointer">
