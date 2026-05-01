@@ -5,6 +5,7 @@ import Decode from "./pages/Games/Decode";
 import Matcho from "./pages/Games/Matcho";
 import Catcher from "./pages/Games/Catcher";
 import TowerofHanoi from "./pages/Games/TowerofHanoi";
+import GuesstheNumber from "./pages/Games/GuesstheNumber";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/matcho" element={<Matcho />} />
           <Route path="/catcher" element={<Catcher />} />
           <Route path="/tower-of-hanoi" element={<TowerofHanoi />} />
+          <Route path="/guess-the-number" element={<GuesstheNumber />} />
         </Route>
       </Routes>
     </BrowserRouter>
