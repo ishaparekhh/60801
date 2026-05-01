@@ -1,0 +1,17 @@
+export const sampleGameStats = {
+  'tower-of-hanoi': { plays: 12, wins: 9, losses: 3, bestScore: 7, bestTimeSeconds: 42 },
+  'guess-the-number': { plays: 20, wins: 14, losses: 6, bestScore: 1, bestTimeSeconds: 8 },
+  'seal-the-box': { plays: 15, wins: 5, losses: 10, bestScore: 0, bestTimeSeconds: 96 },
+  'tic-tac-toe': { plays: 26, wins: 16, losses: 6, draws: 4, bestScore: null, bestTimeSeconds: 14 },
+  'memory-card-game': { plays: 11, wins: 8, losses: 3, bestScore: 12, bestTimeSeconds: 55 },
+  'rock-paper-scissors': { plays: 35, wins: 18, losses: 12, draws: 5, bestScore: null, bestTimeSeconds: null },
+  hangman: { plays: 18, wins: 10, losses: 8, bestScore: 2, bestTimeSeconds: 71 },
+  'whack-a-mole': { plays: 13, wins: 7, losses: 6, bestScore: 31, bestTimeSeconds: 30 },
+  'simon-says': { plays: 10, wins: 4, losses: 6, bestScore: 8, bestTimeSeconds: 78 },
+  'minesweeper-mini': { plays: 9, wins: 3, losses: 6, bestScore: null, bestTimeSeconds: 69 },
+  'word-scramble': { plays: 16, wins: 11, losses: 5, bestScore: 6, bestTimeSeconds: 34 },
+  'reaction-timer': { plays: 22, wins: 15, losses: 7, bestScore: 219, bestTimeSeconds: null },
+  'connect-four': { plays: 17, wins: 9, losses: 6, draws: 2, bestScore: null, bestTimeSeconds: 80 },
+  'typing-speed-test': { plays: 14, wins: 10, losses: 4, bestScore: 72, bestTimeSeconds: 52 },
+  'snake-game': { plays: 19, wins: 12, losses: 7, bestScore: 44, bestTimeSeconds: 135 },
+};

@@ -1,0 +1,7 @@
+[
+  "React state changes cause the component to render again.",
+  "A clear reset button makes every game easier to test.",
+  "The leaderboard should record the result only once.",
+  "Use arrays to represent boards, cards, grids, and moves.",
+  "Timers should be cleared when the component unmounts."
+]

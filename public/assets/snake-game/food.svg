@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="food">
+  <rect width="100%" height="100%" fill="none"/>
+  <circle cx="60" cy="65" r="28" fill="#f87171" stroke="#333333" stroke-width="5"/>
+  <path d="M60 37c8-14 20-15 28-10" fill="none" stroke="#333333" stroke-width="5" stroke-linecap="round"/>
+</svg>

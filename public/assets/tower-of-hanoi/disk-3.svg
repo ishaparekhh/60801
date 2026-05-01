@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="disk-3">
+  <rect width="100%" height="100%" fill="none"/>
+  <rect x="24" y="44" width="72" height="32" rx="16" fill="#fde68a" stroke="#333333" stroke-width="4"/>
+  <line x1="60" y1="20" x2="60" y2="100" stroke="#999999" stroke-width="4" stroke-dasharray="5 5"/>
+</svg>

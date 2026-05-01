@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="ready">
+  <rect width="100%" height="100%" fill="none"/>
+  <rect x="20" y="30" width="80" height="60" rx="12" fill="#eeeeee" stroke="#333333" stroke-width="5"/>
+  <text x="60" y="68" text-anchor="middle" font-size="18" font-family="Arial" fill="#333333">WAIT</text>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="card-back">
+  <rect width="100%" height="100%" fill="none"/>
+  <rect x="20" y="20" width="80" height="80" rx="10" fill="#eeeeee" stroke="#333333" stroke-width="5"/>
+  <path d="M40 40h40v40H40Z" fill="none" stroke="#999999" stroke-width="4" stroke-dasharray="6 5"/>
+</svg>
