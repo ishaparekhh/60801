@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard";
 import Decode from "./pages/Games/Decode";
 import Matcho from "./pages/Games/Matcho";
 import Catcher from "./pages/Games/Catcher";
+import TowerofHanoi from "./pages/Games/TowerofHanoi";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/decode" element={<Decode />} />
           <Route path="/matcho" element={<Matcho />} />
           <Route path="/catcher" element={<Catcher />} />
+          <Route path="/tower-of-hanoi" element={<TowerofHanoi />} />
         </Route>
       </Routes>
     </BrowserRouter>
