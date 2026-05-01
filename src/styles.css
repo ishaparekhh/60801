@@ -1,208 +1,81 @@
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
-@import "@fontsource-variable/geist";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Basic reset only. Header/footer styling intentionally not included. */
-* {
-  box-sizing: border-box;
-}
+@layer base {
+  :root {
+    --background: 260 40% 98%; /* Soft lilac white */
+    --foreground: 260 50% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 260 50% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 50% 10%;
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f7f7f7;
-  color: #222;
-}
+    /* Vibrant Purple */
+    --primary: 267 100% 65%;
+    --primary-foreground: 0 0% 100%;
 
-a {
-  color: inherit;
-}
+    --secondary: 260 20% 92%;
+    --secondary-foreground: 260 50% 10%;
+    --muted: 260 20% 92%;
+    --muted-foreground: 260 15% 45%;
 
-main {
-  min-height: 100vh;
-  padding: 24px;
-}
+    --accent: 267 100% 65%;
+    --accent-foreground: 0 0% 100%;
 
-button,
-input,
-select {
-  font: inherit;
-}
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 260 20% 90%;
+    --input: 260 20% 90%;
+    --ring: 267 100% 65%;
+    --radius: 0.75rem;
+  }
 
-.page {
-  max-width: 1100px;
-  margin: 0 auto;
-}
+  .dark {
+    /* Deep Midnight Purple Background */
+    --background: 260 50% 6%;
+    --foreground: 260 20% 95%;
 
-.card,
-.stat-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  margin-top: 16px;
-}
+    /* Glassy dark cards */
+    --card: 260 40% 10%;
+    --card-foreground: 260 20% 95%;
+    --popover: 260 40% 10%;
+    --popover-foreground: 260 20% 95%;
 
-.link-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 8px;
-  padding-left: 20px;
-}
+    /* Neon Purple Glow */
+    --primary: 267 100% 65%;
+    --primary-foreground: 0 0% 100%;
 
-.button-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-}
+    --secondary: 260 40% 15%;
+    --secondary-foreground: 260 20% 95%;
+    --muted: 260 40% 15%;
+    --muted-foreground: 260 20% 70%;
 
-button {
-  cursor: pointer;
-  border: 1px solid #bbb;
-  border-radius: 6px;
-  background: #fff;
-  padding: 8px 12px;
-}
+    --accent: 267 100% 65%;
+    --accent-foreground: 0 0% 100%;
 
-button:hover {
-  background: #eee;
-}
-
-pre {
-  overflow-x: auto;
-  background: #f1f1f1;
-  border-radius: 6px;
-  padding: 12px;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-}
-
-.stat-card strong {
-  display: block;
-  font-size: 2rem;
-}
-
-.stat-card span {
-  color: #555;
-}
-
-.toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.table-wrapper {
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-}
-
-th,
-td {
-  border-bottom: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
-}
-
-th {
-  background: #f1f1f1;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 260 20% 95%;
+    --border: 260 40% 15%;
+    --input: 260 40% 15%;
+    --ring: 267 100% 65%;
+  }
 }
 
 @layer base {
-  .theme {
-    --font-heading: var(--font-sans);
-    --font-sans: 'Geist Variable', sans-serif;
-  }
-  :root {
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.145 0 0);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.205 0 0);
-    --primary-foreground: oklch(0.985 0 0);
-    --secondary: oklch(0.97 0 0);
-    --secondary-foreground: oklch(0.205 0 0);
-    --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
-    --accent-foreground: oklch(0.205 0 0);
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --radius: 0.625rem;
-    --sidebar: oklch(0.985 0 0);
-    --sidebar-foreground: oklch(0.145 0 0);
-    --sidebar-primary: oklch(0.205 0 0);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.97 0 0);
-    --sidebar-accent-foreground: oklch(0.205 0 0);
-    --sidebar-border: oklch(0.922 0 0);
-    --sidebar-ring: oklch(0.708 0 0);
-  }
-  .dark {
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --sidebar: oklch(0.205 0 0);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
-  }
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
-  html {
-    @apply font-sans;
+  #root {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
 }
