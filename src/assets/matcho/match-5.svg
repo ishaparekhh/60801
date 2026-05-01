@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="5">
+  <rect width="120" height="120" rx="18" fill="#f8fafc"/>
+  <polygon points="60,18 70,45 99,45 75,62 84,90 60,73 36,90 45,62 21,45 50,45" fill="#7c3aed" opacity="0.85"/>
+  <text x="60" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#7c3aed">5</text>
+</svg>
