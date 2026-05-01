@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="basket">
+  <rect width="120" height="120" rx="18" fill="#fef3c7"/>
+  <path d="M30 52h60l-9 42H39z" fill="#92400e"/>
+  <path d="M42 52c0-20 36-20 36 0" fill="none" stroke="#92400e" stroke-width="8" stroke-linecap="round"/>
+  <path d="M40 64h40M37 76h46M48 54l5 40M72 54l-5 40" stroke="#fbbf24" stroke-width="5" stroke-linecap="round"/>
+</svg>

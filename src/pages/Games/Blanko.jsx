@@ -1,32 +1,31 @@
 import { useState, useEffect } from "react";
-import { Button } from "../../components/ui/button";
-import rawCode from "./Decode.jsx?raw";
+import { Button } from "@/components/ui/button";
 
 export const strings = [
-  "code quest",
-  "react exam",
-  "pixel maze",
-  "debug time",
-  "fast input",
-  "nav routes",
-  "local data",
+  "the fat cats",
+  "larger frogs",
+  "banana cakes",
+  "unsw vs usyd",
+  "french toast",
+  "hawaii pizza",
+  "barack obama",
 ];
 
-export default function Decode() {
-  const handleDownload = () => {
-    const element = document.createElement("a");
-    const file = new Blob([rawCode], { type: "text/plain" });
-    element.href = URL.createObjectURL(file);
-    element.download = "Decode.jsx";
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
-  };
-
+export default function Blanko() {
   const [targetStr, setTargetStr] = useState("");
   const [missingIndices, setMissingIndices] = useState([]);
 
   const [inputs, setInputs] = useState({});
+
+  const handleDownload = () => {
+    const element = document.createElement("a");
+    const file = new Blob([rawCode], { type: "text/plain" });
+    element.href = URL.createObjectURL(file);
+    element.download = "Blanko.jsx";
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  };
 
   const initGame = () => {
     // Pick a random string
@@ -42,7 +41,7 @@ export default function Decode() {
     }
 
     const chosen = [];
-    while (chosen.length < 4) {
+    while (chosen.length < 3) {
       const randIndex =
         validIndices[Math.floor(Math.random() * validIndices.length)];
       if (!chosen.includes(randIndex)) {
@@ -72,7 +71,7 @@ export default function Decode() {
     const filledKeys = Object.keys(currentInputs).filter(
       (k) => currentInputs[parseInt(k)] !== "",
     );
-    if (filledKeys.length !== 4) return false;
+    if (filledKeys.length !== 3) return false;
 
     // Check if all 3 filled boxes are correct
     let allCorrect = true;
@@ -101,7 +100,7 @@ export default function Decode() {
   if (!targetStr) return null;
   return (
     <div className="flex-1 flex flex-col items-center justify-center gap-12">
-      {/* 10 Boxes */}
+      {/* 12 Boxes */}
       <div className="flex justify-center gap-2">
         {targetStr.split("").map((char, i) => {
           const isMissing = missingIndices.includes(i);
@@ -114,7 +113,7 @@ export default function Decode() {
                 maxLength={1}
                 value={inputs[i] || ""}
                 onChange={(e) => handleInputChange(e, i)}
-                className="w-12 h-12 text-center text-2xl uppercase font-bold bg-card border-[1px] border-[#333333] rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 text-foreground"
+                className="w-12 h-12 text-center text-2xl uppercase font-bold bg-card border-2 border-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 text-foreground"
               />
             );
           }
@@ -125,7 +124,7 @@ export default function Decode() {
               className={`w-12 h-12 flex items-center justify-center text-2xl font-bold rounded-md uppercase ${
                 char === " "
                   ? "bg-transparent"
-                  : "bg-card border-[1px] border-[#333333] rounded-md shadow-sm text-foreground"
+                  : "bg-card border border-border shadow-sm text-foreground"
               }`}
             >
               {char}
@@ -138,8 +137,8 @@ export default function Decode() {
       <Button onClick={initGame} variant="default" className="w-[200px]">
         Reset
       </Button>
-      <Button 
-        onClick={handleDownload} 
+      <Button
+        onClick={handleDownload}
         className="fixed bottom-[60px] right-6 z-50"
       >
         Code for file
