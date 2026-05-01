@@ -81,6 +81,21 @@ export default function Header() {
                 Catcher
               </Link>
             </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link to="/blanko" className="w-full cursor-pointer">
+                Blanko
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link to="/slido" className="w-full cursor-pointer">
+                Slido
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link to="/tetro" className="w-full cursor-pointer">
+                Tetro
+              </Link>
+            </DropdownMenuItem>
             {gameCatalog.map((game) => (
               <DropdownMenuItem key={game.id} asChild>
                 <Link to={game.route} className="w-full cursor-pointer">
