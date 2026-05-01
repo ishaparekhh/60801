@@ -52,6 +52,9 @@ export default function Header() {
           <Link to="/" className="transition-colors hover:text-primary">
             <Home></Home>
           </Link>
+          <Link to="/leaderboard" className="transition-colors hover:text-primary text-sm font-semibold">
+            🏆 Leaderboard
+          </Link>
         </div>
 
         {/* Hamburger Games Menu */}
@@ -66,6 +69,11 @@ export default function Header() {
             align="end"
             className="w-56 max-h-[70vh] overflow-y-auto"
           >
+            <DropdownMenuItem asChild>
+              <Link to="/leaderboard" className="w-full cursor-pointer font-semibold">
+                🏆 Leaderboard
+              </Link>
+            </DropdownMenuItem>
             <DropdownMenuItem asChild>
               <Link to="/decode" className="w-full cursor-pointer">
                 Decode
