@@ -8,6 +8,7 @@ import TowerofHanoi from "./pages/Games/TowerofHanoi";
 import Blanko from "./pages/Games/Blanko";
 import Slido from "./pages/Games/Slido";
 import Tetro from "./pages/Games/Tetro";
+import TicTacToe from "./pages/Games/TicTacToe";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/blanko" element={<Blanko />} />
           <Route path="/slido" element={<Slido />} />
           <Route path="/tetro" element={<Tetro />} />
+          <Route path="tic-tac-toe" element={<TicTacToe />} />
           <Route path="/tower-of-hanoi" element={<TowerofHanoi />} />
         </Route>
       </Routes>
